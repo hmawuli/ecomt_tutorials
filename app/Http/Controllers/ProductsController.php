@@ -12,8 +12,8 @@ class ProductsController extends Controller
         $title =" Welcome to laravel8 course";
         $description ="my name is mawuli";
         
-        
-        return view('products.index');
+        // compact method
+        return view('products.index', compact('title','description'));
         
     }
 
