@@ -11,12 +11,10 @@ use App\Http\Controllers\ProductsController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/ 
-
+*/
 
 Route::get('/products', [ProductsController::class,'index']);
-Route::get('/products/about', [ProductsController::class, 'about']);
-// Also laravel8 new 
-//Route::get('/products', 'App\Http\Controllers\ProductsController@index');
 
-//Route::get('/products/about',[ProductsController::class, 'about ']);
+Route::get('/products/{$id}',[ProductsController::class, 'show'])>where('id','[0-9]+');
+
+
