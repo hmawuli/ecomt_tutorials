@@ -10,15 +10,15 @@ class ProductsController extends Controller
 {
   public function index(){
     $title= "Welcome to my new laravel projects ";
-    $description =' created by mawuli'
+    $description =' created by mawuli';
     //return view('/products.index', compact('title'));
   }
-  
+
 
   public function about(){
-    return 'about our page'; 
+    return 'about our page';
   }
-   public function public function show($name)
+   public function  show($name)
    {
        $data =[
            'iphone' => 'iphone',
@@ -26,7 +26,7 @@ class ProductsController extends Controller
        ];
 
    return view('products.index',[
-       'products' => $data[$name  ] ?? 'products'. $name. 'does not exist';
+       'products' => $data[$name  ] ?? 'products'. $name. 'does not exist'
    ]);
    }
 }
